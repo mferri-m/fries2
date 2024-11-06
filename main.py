@@ -1,6 +1,6 @@
 import utils as u
 from importTelegraph import *
-from IPFSscraper import get_acelinks_ipfs
+from ipfs_scraper import get_acelinks_ipfs
 from znProxyScraper import main
 import asyncio
 #from tools import *
