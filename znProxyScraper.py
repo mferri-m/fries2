@@ -4,7 +4,7 @@ from playwright.async_api import async_playwright
 
 
 
-async def get_acelinks():
+async def get_acelinks_zn():
 
     url = 'https://proxy.zeronet.dev/18D6dPcsjLrjg2hhnYqKzNh2W6QtXrDwF'
 
@@ -93,6 +93,6 @@ async def get_acelinks():
 
 
 async def main():
-    await get_acelinks()
+    await get_acelinks_zn()
 
 #asyncio.run(main())

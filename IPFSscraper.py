@@ -3,7 +3,7 @@ import json
 
 save_to_path = 'toys/cachedList.txt'
 
-def saca_ids_ipfs():
+def get_acelinks_ipfs():
 
     #url = 'https://ipfs.io/ipns/k51qzi5uqu5dgg9al11vomikugim0o1i3l3fxp3ym3jwaswmy9uz8pq4brg1u9'
     url = 'https://ipfs.io/ipns/k51qzi5uqu5dgg9al11vomikugim0o1i3l3fxp3ym3jwaswmy9uz8pq4brg1u9'
@@ -65,4 +65,4 @@ def saca_ids_ipfs():
         return
 
 
-#saca_ids_ipfs()
+#get_acelinks_ipfs()
