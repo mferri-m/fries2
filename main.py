@@ -246,7 +246,7 @@ def write_channel_lists(all_channels):
         print("exportChannels : ERROR : list is empty")
         
 
-if __nam__ == "__main__":
+if __name__ == "__main__":
     #scraper()
     #getCachedList()
     get_acelinks_ipfs()
