@@ -249,6 +249,6 @@ def write_channel_lists(all_channels):
 if __name__ == "__main__":
     #scraper()
     #getCachedList()
-    get_acelinks_ipfs
+    get_acelinks_ipfs()
     #asyncio.run(main())
     export_messages()
