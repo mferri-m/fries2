@@ -6,7 +6,7 @@ save_to_path = 'toys/cachedList.txt'
 def get_acelinks_ipfs():
 
     #url = 'https://ipfs.io/ipns/k51qzi5uqu5dgg9al11vomikugim0o1i3l3fxp3ym3jwaswmy9uz8pq4brg1u9'
-    url = 'https://ipfs.io/ips/k51qzi5uqu5dgg9al11vomikugim0o1i3l3fxp3ym3jwaswmy9uz8pq4brg1u9'
+    url = 'https://ipfs.io/ipns/k51qzi5uqu5dgg9al11vomikugim0o1i3l3fxp3ym3jwaswmy9uz8pq4brg1u9'
 
     '''
     # TOR USAGE. UNCOMMENT LINE INSIDE try/except BOLOCK:
