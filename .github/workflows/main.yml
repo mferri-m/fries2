@@ -48,7 +48,7 @@ jobs:
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
             -d text="⚠️ ERROR elcano fries2"
             -d parse_mode="HTML" \
-            -d text="⚠️ ERROR elcano <a href='https://github.com/${{ github.repository }}/actions'>fries2</a>"
+            -d text="⚠️ ERROR elcano <a href='https://github.com/${{ monFries/fries2 }}/actions'>fries2</a>"
           fi
 
       - name: Notify Telegram on Success
@@ -59,7 +59,7 @@ jobs:
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
             #-d text="✅ OK elcano fries2"
             -d parse_mode="HTML" \
-            -d text="✅ OK elcano <a href='https://github.com/${{ github.repository }}/actions'>fries2</a>"
+            -d text="✅ OK elcano <a href='https://github.com/${{ monFries/fries2 }}/actions'>fries2</a>"
           fi
 
       - name: commit files
