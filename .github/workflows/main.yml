@@ -46,9 +46,7 @@ jobs:
           if [ -n "${{ secrets.TELEGRAM_BOT_TOKEN }}" ] && [ -n "${{ secrets.TELEGRAM_CHAT_ID }}" ]; then
             curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            #-d text="⚠️ ERROR elcano fries2"
-            -d parse_mode="HTML" \
-            -d text="⚠️ ERROR elcano <a href='https://github.com/${{ github.repository }}/actions'>fries2</a>"
+            -d text="⚠️ ERROR elcano fries2"
           fi
 
       - name: Notify Telegram on Success
@@ -57,10 +55,29 @@ jobs:
           if [ -n "${{ secrets.TELEGRAM_BOT_TOKEN }}" ] && [ -n "${{ secrets.TELEGRAM_CHAT_ID }}" ]; then
             curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d parse_mode="HTML" \
-            -d text="✅ OK elcano <a href='https://github.com/${{ github.repository }}/actions'>fries2</a>"
+            -d text="✅ OK elcano fries2"
           fi
+      
+      #- name: Notify Telegram on Failure
+        #if: failure()
+        #run: |
+          #if [ -n "${{ secrets.TELEGRAM_BOT_TOKEN }}" ] && [ -n "${{ secrets.TELEGRAM_CHAT_ID }}" ]; then
+            #curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            #-d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            #-d parse_mode="HTML" \
+            #-d text="⚠️ ERROR elcano <a href='https://github.com/${{ github.repository }}/actions'>fries2</a>"
+          #fi
 
+      #- name: Notify Telegram on Success
+        #if: success()
+        #run: |
+          #if [ -n "${{ secrets.TELEGRAM_BOT_TOKEN }}" ] && [ -n "${{ secrets.TELEGRAM_CHAT_ID }}" ]; then
+            #curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            #-d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            #-d parse_mode="HTML" \
+            #-d text="✅ OK elcano <a href='https://github.com/${{ github.repository }}/actions'>fries2</a>"
+          #fi
+      
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
