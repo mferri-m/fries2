@@ -1,8 +1,11 @@
 import utils as u
 from importTelegraph import *
+from IPFSscraper import get_acelinks_ipfs
+from znProxyScraper import main
+import asyncio
 #from tools import *
 #from getElcano import *
-from getElcanoWeb import *
+#from getElcanoWeb import *
 # Push from terminal from a second user
 # git config --local credential.helper ""
 
@@ -246,5 +249,6 @@ def write_channel_lists(all_channels):
 if __name__ == "__main__":
     #scraper()
     #getCachedList()
+    get_acelinks_ipfs
     asyncio.run(main())
     export_messages()
