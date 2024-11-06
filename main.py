@@ -250,5 +250,5 @@ if __name__ == "__main__":
     #scraper()
     #getCachedList()
     get_acelinks_ipfs()
-    #asyncio.run(main())
+    asyncio.run(main())
     export_messages()
