@@ -24,8 +24,7 @@ def get_acelinks_ipfs():
     except requests.HTTPError as e:
         # Send your bot notification here
         print(f"IPFS ERROR: {e}")
-        #exit(1)
-        return
+        exit(1)
 
     print("IPFS Response Status:", response.status_code)
     content = response.content.decode('utf-8', errors='replace')  # Use UTF-8 encoding
@@ -42,8 +41,7 @@ def get_acelinks_ipfs():
             links_data = json.loads(json_data)
             if not links_data["links"]:
                 print("No links found in links_data.")
-                #exit(1)
-                return
+                exit(1)
             plain_text_list = []
 
             for link in links_data["links"]:
@@ -58,12 +56,10 @@ def get_acelinks_ipfs():
 
             saved_link_count = len(plain_text_list) // 2
             print(f"{saved_link_count} enlaces acestream guardados desde IPFS")
-            exit(0)
 
     else:
         print("No links data found in the content.")
-        #exit(1)
-        return
+        exit(1)
 
 
 #get_acelinks_ipfs()
