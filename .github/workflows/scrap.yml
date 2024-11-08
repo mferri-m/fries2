@@ -3,11 +3,11 @@ name: run scrap.py
 on:
   workflow_dispatch:
 
-  schedule:
+  #schedule:
     # Corre cada 1h
     #- cron: '0 * * * *'
     # Otras programaciones
-    - cron: '7 8-22 * * *'
+    #- cron: '7 8-22 * * *'
     #- cron: '0 0-9/3 * * *'
     # Corre cada 3h    
     #- cron: '0 */3 * * *'
